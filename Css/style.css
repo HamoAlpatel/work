@@ -1,0 +1,474 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --white: #fff;
+
+    --C_blue: rgb(0, 17, 255);
+    --C_yellow: rgb(255, 253, 158);
+    --C_red: rgb(195, 25, 82);
+
+    --B_3: rgb(204, 246, 238);
+    --C_3: rgb(0, 107, 108);
+
+    --B_4: rgb(255, 223, 233);
+    --C_4: rgb(195, 47, 0);
+
+    --font_1: 'font-1';
+
+    --main-padding: 100px 0;
+    /* --font_2:'font-2'; */
+    /* --font_3:'font-3'; */
+}
+:where(button,a){
+    cursor: pointer;
+}
+:where(.coulmn,.row,.login){
+    overflow-x: hidden;
+}
+body {
+    font-family: 'Jost', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Quicksand', sans-serif;
+    font-family: 'Reem Kufi', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
+    overflow-x: hidden;
+}
+/*  */
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #111;
+    transition: opacity 1.5s, visibility 1.5s;
+    z-index: 1000000;
+  }
+  
+  .loader--hidden {
+    opacity:1;
+    visibility: hidden;
+  }
+  
+  .loader::after {
+    content: "";
+    width: 75px;
+    height: 75px;
+    border: 15px dotted #000;
+    border-top-color: #fffd92;
+    border-left-color: #fffd92;
+    /* border-bottom: blue; */
+    /* border-right-color: blue; */
+    border-radius: 50%;
+    animation: loading 1s linear infinite;
+  }
+  
+  @keyframes loading {
+    from {
+      transform: rotate(0turn);
+    }
+    to {
+        
+      transform: rotate(1turn);
+    }
+  }
+
+/*  */
+.search .row {
+    display: flex;
+    justify-content: space-around;
+    background-color: #fffd92;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    flex-wrap: wrap;
+
+}
+
+.row .col-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+}
+
+.center {
+    position: absolute;
+    left: 180px;
+    top: 80px;
+    z-index: 999;
+    width: 300px;
+}
+
+.top-right {
+    position: absolute;
+    top: 50px;
+    left: 440px;
+    width: 150px;
+
+}
+
+.search .left {
+    position: absolute;
+    top: 120px;
+    left: 70px;
+    width: 200px;
+}
+
+.search .right {
+    position: absolute;
+    top: 400px;
+    left: 440px;
+    width: 120px;
+}
+
+/* end search */
+/* start save */
+.save {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--B_3);
+}
+
+.save .left {
+    width: 50%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    text-align: center;
+    color: var(--C_3);
+}
+
+.save .left p {
+    max-width: 250px;
+}
+.save .left button {
+    width: fit-content;
+    margin: 0 auto;
+    display: block;
+    background-color: var(--C_3);
+    border-radius: 20px;
+    padding: 7px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.save .right {
+    width: 50%;
+    /* min-height: 100vh; */
+    /* background-color: #000000; */
+    display: flex;
+    gap: 20px;
+}
+
+.save .right .coulmn:first-child {
+    /* background-color: red; */
+    width: 50%;
+    /* height: 100vh; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: 15px;
+}
+
+.save .right .coulmn:first-child div:first-child {
+    background-image: url(../Images/bathroom-upgrade-48ebb8fc.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 280px;
+    min-height: 300px;
+    /* min-height: auto; */
+}
+
+.save .right .coulmn:first-child div:last-child {
+    width: 150px;
+    min-height: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(../Images/serve-my-drinks-263547ea.png);
+}
+
+.save .right .coulmn:last-child {
+    /* background-color: rgb(0, 247, 255); */
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.save .right .coulmn:last-child div:nth-child(1) {
+    height: 190px;
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(../Images/deck-of-dreams-fb527bf1.png);
+}
+
+.save .right .coulmn:last-child div:nth-child(2) {
+    height: 130px;
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(../Images/scandinavian-bedroom-917ad89c.png);
+}
+
+.save .right .coulmn:last-child div:nth-child(3) {
+    height: 190px;
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(../Images/topRight-d0230035.png);
+}
+
+@media(width < 1160px) {
+    .save {
+        /* flex-direction: column-reverse; */
+        align-items: center;
+        justify-content: center;
+    }
+
+    .save .left {
+        min-height: 40vh;
+        width: 100%;
+        /* background-color: red; */
+    }
+
+    .save .right {
+        /* display: none; */
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .save .right .coulmn:last-child {
+        display: none;
+    }
+
+    .save .right .coulmn:first-child div:last-child {
+        display: none;
+    }
+
+    .save .right .coulmn:first-child {
+        width: 100%;
+        align-items: center;
+    }
+
+}
+
+@media(width < 550px) {
+    .save {
+        flex-direction: column-reverse;
+    }
+}
+
+/* end save */
+.row-2 {
+    display: flex;
+    width: 100%;
+    background-color: #ffe2eb;
+    align-items: center;
+}
+
+.row-2 .col-1 {
+    background-image: url(../Images/shop-bd0c8a04.png);
+    height: 100vh;
+    width: 50%;
+    background-size: cover;
+    background-color: red;
+}
+
+.row-2 .col-2 {
+    max-width: 300px;
+    margin: auto;
+}
+
+.col-2 h1 {
+    font-size: 2.4rem;
+    color: var(--C_4);
+    text-align: center;
+}
+
+.col-2 p {
+    text-align: center;
+    color: var(--C_4);
+}
+
+.col-2 button {
+    width: fit-content;
+    margin: auto;
+    display: block;
+    background-color: var(--C_4);
+    border-radius: 20px;
+    padding: 7px;
+    color: white;
+    border: none;
+}
+
+/* @media(width < 950px){
+    .search .left{
+        display: none;
+    }
+} */
+@media(width < 730px) {
+    .row-2 {
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    .row-2 .col-1 {
+        max-height: 350px;
+        width: 100%;
+    }
+}
+
+@media (width < 1111px) {
+    .search .row .col-1 :not(img.center) {
+        display: none;
+    }
+
+    img.center {
+        position: static;
+    }
+}
+
+@media (width < 670px) {
+    img.center {
+        width: 250px;
+    }
+
+    .search .row {
+        padding: 30px 0;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 20px;
+    }
+}
+/* start login */
+.login{
+    min-height:100vh;
+    background-image: url(../Images/login.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding: var(--main-padding);
+}
+.login>h1{
+    color: white;
+    font-size: 55px;
+    font-weight: 500;
+    max-width: 300px ;
+    text-align: center;
+}
+.login form{
+    background: #fff;
+    width: 330px;
+    padding: 15px 35px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.login form img{
+    width: 20px;
+}
+.login form>h1{
+font-size: 25px;
+font-weight: 500;
+margin: 15px 0 7px;
+}
+.login form>p{
+    font-size: 12px;
+    color: #555;
+    font-weight: 100;
+    margin-bottom: 20px;
+}
+
+.login form .inp {
+    padding: 0;
+    margin: 0;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap:3px;
+    margin-bottom: 10px;
+}
+.login form .inp h2{
+    font-size: 11px;
+    color: #555;
+    font-weight: 100;
+    margin-left: 10px;    
+}
+.login form input{
+    width: 100%;
+    min-width: 200px;
+    padding: 9px 12px;
+    border-radius: 10px;
+    border: 1px solid #999;
+}
+.login form .or{
+    margin: 10px 0;
+    font-weight: 700;
+    color: #000;
+}
+.login form button{
+    width: 70% ;
+    border-radius: 20px;
+    padding: 7px 0;  
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border: none;
+    background: rgb(247, 43, 43);
+    color: white;
+    margin-left: 5px;
+    cursor: pointer;
+}
+.login form .fac{
+    background: #006AFF;
+    border: none;
+    color: white;
+    margin-bottom: 15px;
+}
+.login form .fac i{
+    font-size: large;   
+}
+.login form p:last-child{
+    max-width: 70%;
+    font-size: 10px;
+    text-align: center;
+}
+@media(width < 350px){
+    .login form{
+        width: 270px;
+        /* padding: 15px 25px; */
+        padding: 15px 0;
+    }
+    .login form input{
+        width: 100%;
+    }
+}
+/* end login */
+
+

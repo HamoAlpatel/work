@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pinterest</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="Css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+</head>
+
+<body>
+    <div class="loader"></div>
+    <script>
+      window.addEventListener("load", () => {
+  const loader = document.querySelector(".loader");
+
+  loader.classList.add("loader--hidden");
+
+  loader.addEventListener("transitionend", () => {
+    document.body.removeChild(loader);
+  });
+});
+    </script>
+
+
+
+    <div class="search" id="search">
+        <div class="row">
+            <div class="col-1">
+                <img class="top-right" src="Images/topRight-d0230035.png">
+                <img class="center" data-aos="fade-right" src="Images/center-77497603.png">
+                <img class="left" src="Images/left-511a9304.png" alt="">
+                <img class="right" src="Images/right-88044782.png" alt="">
+            </div>
+            <div class="col-2" >
+                <h1>Search for an idea</h1>
+                <p>What do you want to try next? Think <br> of something you’re into—like “easy <br>chicken dinner” —and
+                    see what you<br> find.</p>
+                <button>Explore</button>
+            </div>
+        </div>
+    </div>
+    <div class="save">
+        <div class="left" data-aos="fade-down-right">
+            <h1>Save Ideas you like</h1>
+            <p>What do you want to try next? Think of something </p>
+            <button>Explore</button>
+        </div>
+        <div class="right">
+            <div class="coulmn">
+                <div class="one" data-aos="fade-left"></div>
+                <div class="two"></div>
+            </div>
+            <div class="coulmn">
+                <div class="one"></div>
+                <div class="two"></div>
+                <div class="there"></div>
+            </div>
+        </div>
+    </div>
+    <div class="row row-2">
+        <div class="col-1" data-aos="zoom-in">
+        </div>
+        <div class="col-2" data-aos="fade-up">
+            <h1>See it, make it, try it, do it</h1>
+            <p>The best part of Pinterest is discovering new things and ideas from people around the world.</p>
+            <button>Explore</button>
+        </div>
+    </div>
+
+    <div class="login">
+        <h1 data-aos="fade-right">Sign up to get your ideas</h1>
+        <form action="" data-aos="fade-left">
+            <img src="Images/logo.png" alt="">
+            <h1>Welcom to ASA</h1>
+            <p>Find new ideas to try</p>
+            <div class="inp">
+                <h2>Email</h2>
+                <input type="email" placeholder="Email" name="" id="">
+            </div>
+            <div class="inp">
+                <h2>Password</h2>
+                <input type="password" placeholder="password" name="" id="">
+            </div>
+            <div class="inp">
+                <h2>Birthdate</h2>
+                <input type="date">
+            </div>
+            <button>Continue</button>
+            <p class="or">OR</p>
+        <button class="fac">
+            <i class="fa-brands fa-facebook"></i>
+            <p>Continue with facebook</p>
+        </button>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat pariatur ex dolorem labore harum eaque
+        </p>
+        </form>
+   
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        // once: true,
+      });
+    </script>
+
+
+</body>
+
+</html>
